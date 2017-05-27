@@ -3,7 +3,14 @@ Quickstart - Java
 
 Install
 ----------------
+Add the following to your project build.gradle
 
+.. code-block:: java
+
+    dependencies {
+        compile 'com.github.lawloretienne:trestle:0.0.3'
+    }
+    
 Usage
 ----------
 The Java library is very easy to use as well
