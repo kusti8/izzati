@@ -1,1 +1,1 @@
-include ':app', ':izzati', ':izzatitest'
+include ':izzati', ':izzatitest'

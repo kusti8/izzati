@@ -37,6 +37,7 @@ The Java library is very easy to use as well
 Return Types
 ------------------
 If you want to receive a binary instead of a JSON, observe the following changes:
+
 .. code-block:: java
 
     public void sendMessage(View view) throws JSONException {
