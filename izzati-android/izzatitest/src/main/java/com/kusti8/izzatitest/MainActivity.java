@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.kusti8.izzati.Izzati;
+import com.kusti8.izzati.IzzatiJsonHandler;
 import com.loopj.android.http.FileAsyncHttpResponseHandler;
 
 import org.json.JSONException;
@@ -76,31 +77,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMessage(View view) throws JSONException {
         EditText text = (EditText)findViewById(R.id.jsonTxt);
-        String value = text.getText().toString();
-        Izzati i = new Izzati();
+        String value = text.getText().toString(); // The JSON data is stored here
+        // The input parameter can be a JSONObject or a string
+        Izzati i = new Izzati();                  // Initialize Izzati
         JSONObject obj = new JSONObject(value);
-        i.url = "http://192.168.100.118:5020/";
+        i.url = "http://192.168.100.118:5020/";   // Set in Izzati, the URL
         if (file == null) {
-            i.send(obj, new FileAsyncHttpResponseHandler(this) {
+            i.send(obj, new IzzatiJsonHandler() { // If there is no file selected, send JSON and expect JSON back
                 @Override
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, File file) {
-                    throwable.printStackTrace();
-                }
-
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, File response) {
-                    Log.w("self", response.toString());
+                public void callback(JSONObject response) {
+                    Log.w("self", response.toString()); // Print out the response
                 }
             });
         } else {
-            i.send(obj, file, new FileAsyncHttpResponseHandler(this) {
+            i.send(obj, file, new IzzatiJsonHandler() { // If there is a file, simply specify it after the JSON
                 @Override
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, File file) {
-                    throwable.printStackTrace();
-                }
-
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, File response) {
+                public void callback(JSONObject response) {
                     Log.w("self", response.toString());
                 }
             });
