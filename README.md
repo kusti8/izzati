@@ -26,3 +26,6 @@ which is the backend, and a Java sample inside the Android project.
 ## Documentation
 All documentation lives at read the docs:
 http://izzati.readthedocs.io/en/latest/
+
+#Join the team 
+ Do you want to collaborate? Join the project at https://crowdforge.io/projects/229
