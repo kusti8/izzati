@@ -20,13 +20,16 @@ class FlaskHandle(View):
     def dispatch_request(self):
         files = request.files.getlist('file')
         if request.form:
-            js = request.form['json']
+            js = dict(request.form)
+            for key, value in js.items():
+                if len(value) == 1:
+                    js[key] = value[0]
         else:
             js = '{}'
         try:
-            return jsonify(self.callback(json.loads(js), files))
+            return jsonify(self.callback(js, files))
         except:
-            return self.callback(json.loads(js), files)
+            return self.callback(js, files) # File is returned
 
     def run(self, host="0.0.0.0", port=5020):
         self.app.run(host=host, port=port)

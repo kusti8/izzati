@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // The input parameter can be a JSONObject or a string
         Izzati i = new Izzati();                  // Initialize Izzati
         JSONObject obj = new JSONObject(value);
-        i.url = "http://192.168.100.118:5020/";   // Set in Izzati, the URL
+        i.url = "http://192.168.100.108:5020/";   // Set in Izzati, the URL
         if (file == null) {
             i.send(obj, new IzzatiJsonHandler() { // If there is no file selected, send JSON and expect JSON back
                 @Override
