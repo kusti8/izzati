@@ -8,7 +8,7 @@ Add the following to your project build.gradle
 .. code-block:: java
 
     dependencies {
-        compile 'com.github.kusti8:izzati:1.1.0'
+        compile 'com.github.kusti8:izzati:1.2.0'
     }
 
 Usage
