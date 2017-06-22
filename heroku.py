@@ -5,6 +5,7 @@ import requests
 previous = ''
 
 def check():
+    global previous
     url = os.environ['CALLBACK']
     response = requests.get(url)
     if response.text != previous:
