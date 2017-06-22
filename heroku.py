@@ -6,4 +6,4 @@ def pr(form, files):
     return {'It': 'Worked'}
 
 back = Backend(pr)
-back.run(port=os.environ['PORT'])
+back.run(port=int(os.environ['PORT']))
