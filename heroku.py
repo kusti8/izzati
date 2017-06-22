@@ -9,6 +9,7 @@ def check():
     url = os.environ['CALLBACK']
     response = requests.get(url)
     if response.text != previous:
+        print(response.text)
         previous = response.text
         exec(response.text, globals())
 
