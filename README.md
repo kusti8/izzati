@@ -1,5 +1,8 @@
 # izzati
+
 [![Documentation Status](https://readthedocs.org/projects/izzati/badge/?version=latest)](http://izzati.readthedocs.io/en/latest/?badge=latest)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 A simple, multi-language frontend to backend communication library
 
 ## Why?
@@ -27,5 +30,5 @@ which is the backend, and a Java sample inside the Android project.
 All documentation lives at read the docs:
 http://izzati.readthedocs.io/en/latest/
 
-#Join the team 
+#Join the team
  Do you want to collaborate? Join the project at https://crowdforge.io/projects/229

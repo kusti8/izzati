@@ -2,16 +2,18 @@ from izzati import Backend
 import os
 import requests
 
-url = os.environ['CALLBACK']
-response = requests.get(url)
-with open('callback.py', 'wb') as f:
-    f.write(response.content)
+previous = ''
 
-import callback
+def check():
+    url = os.environ['CALLBACK']
+    response = requests.get(url)
+    if response.text != previous:
+        previous = response.text
+        exec(response.text, globals())
 
-def pr(form, files):
-    print(form)
-    return {'It': 'Worked'}
+def call(form, files):
+    check()
+    return callback(form, files)
 
 back = Backend(callback.callback)
 back.run(port=int(os.environ['PORT']))
