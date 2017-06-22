@@ -14,6 +14,7 @@ Welcome to izzati's documentation!
    backend-quickstart
    quickstart-java
    quickstart-python
+   quickstart-other
    samples
 
 
