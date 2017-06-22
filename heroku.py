@@ -15,5 +15,5 @@ def call(form, files):
     check()
     return callback(form, files)
 
-back = Backend(callback.callback)
+back = Backend(call)
 back.run(port=int(os.environ['PORT']))
