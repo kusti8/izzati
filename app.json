@@ -2,5 +2,8 @@
   "name": "Izzati",
   "description": "A way to run an izzati backend quickly on Heroku",
   "repository": "https://github.com/kusti8/izzati",
-  "keywords": ["izzati", "python", "backend"]
+  "keywords": ["izzati", "python", "backend"],
+  "env": {
+        "CALLBACK": null
+    }
 }
