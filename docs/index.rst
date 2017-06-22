@@ -17,6 +17,7 @@ Welcome to izzati's documentation!
    quickstart-other
    samples
 
+   heroku
 
 
 Indices and tables
