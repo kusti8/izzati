@@ -6,6 +6,8 @@
 Welcome to izzati's documentation!
 ==================================
 
+**Source:** https://github.com/kusti8/izzati
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
