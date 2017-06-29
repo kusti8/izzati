@@ -19,11 +19,12 @@ dealing with HTTP POST or GET etc.
 * Dead simple library that is intuitive to use
 * Supports sending images back and forth and returns a simple file object on both sides
 * Uses callbacks so no large while loop
+* Supports easy to use background processes
 * Deciphers all the messages into native dictionary objects
 * Clear documentation so everything you need is in one place
 
 ## Samples
-Working samples include `test.py` which is the backend, `test-frontend.py`
+Working samples include `tests/test.py` which is the backend, `tests/test-frontend.py`
 which is the backend, and a Java sample inside the Android project.
 
 ## Documentation
