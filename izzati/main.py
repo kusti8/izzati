@@ -42,10 +42,12 @@ class FlaskHandle(View):
                     js[key] = value[0]
         else:
             js = '{}'
+
+        ret = self.run_callback(js, files)
         try:
-            return jsonify(self.run_callback(js, files))
+            return jsonify(ret)
         except:
-            return self.run_callback(js, files) # File is returned
+            return ret # File is returned
 
 
 class Backend():
@@ -60,7 +62,7 @@ class Backend():
             self.q = None
             self.app.add_url_rule('/', view_func=FlaskHandle.as_view('backend', callback=callback, args=args, kwargs=kwargs))
 
-    def run(self, host="0.0.0.0", port=5020, use_reloader=True):
+    def run(self, host="0.0.0.0", port=5020, use_reloader=False):
         if self.background:
             return self.run_background(host=host, port=port)
         self.app.run(host=host, port=port, debug=True, use_reloader=use_reloader)

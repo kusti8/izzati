@@ -2,9 +2,10 @@ from izzati import Backend, file_return
 
 def pr(form, files):
     print(form)
+    print(files)
     for x in files:
-        x.save('/tmp/test.jpg')
-    return {'It': 'Worked'}
+        x.save('/tmp/testing.jpg')
+    return file_return('/home/kusti8/Pictures/sprite.jpg')
 
 back = Backend(pr)
 back.run()
