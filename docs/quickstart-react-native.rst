@@ -7,7 +7,7 @@ Install
 .. code-block:: bash
 
     npm i react-native-izzati --save
-    react-native link
+    RNFB_ANDROID_PERMISSIONS=true react-native link
 
 Usage
 -----------
