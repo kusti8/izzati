@@ -1,0 +1,3 @@
+[submodule "izzati-js"]
+	path = izzati-js/izzati
+	url = https://github.com/kusti8/izzati-js
