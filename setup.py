@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='izzati',
-      version='1.2.2',
+      version='1.2.3',
       description='A simple, multi-language frontend to backend communication library',
       classifiers=[
         'Development Status :: 5 - Production/Stable',
