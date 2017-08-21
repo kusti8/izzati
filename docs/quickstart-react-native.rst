@@ -16,7 +16,7 @@ Usage
 
 2. Then create a new instance with the URL ``let i = new Izzati("http://192.168.1.17:5020/")``
 
-3. Then send, using ``i.send(options, callback)``. The format is described in the
+3. Then send, using ``i.send(options)``. The format is described in the
 below table.
 
 **The input options object has three items which are all themselves objects, text, file, and response.**
@@ -68,10 +68,12 @@ Example
 .. code-block:: javascript
 
     let i = new Izzati("http://192.168.1.17:5020/")
-    i.send({text: {hello: 'me'}, file: {uri: resizedImageUri, filename: 'photo.jpg'}, response: {base64: false}}, (out) => {
+    i.send({text: {hello: 'me'}, file: {uri: resizedImageUri, filename: 'photo.jpg'}, response: {base64: false}}).then( out => {
         this.setState(previous => {
             return {uri: i.prefixPath(out.path)}
       })
+    }).catch(err => {
+        console.log(err)
     })
     ...
     <Image style={{flex: 1}} source={{uri: this.state.uri}} />
