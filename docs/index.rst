@@ -17,6 +17,7 @@ Welcome to izzati's documentation!
    quickstart-java
    quickstart-python
    quickstart-react-native
+   quickstart-esp8266
    quickstart-other
    samples
 

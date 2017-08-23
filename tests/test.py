@@ -5,7 +5,8 @@ def pr(form, files):
     print(files)
     for x in files:
         x.save('/tmp/testing.jpg')
-    return file_return('/home/kusti8/Pictures/sprite.jpg')
+    #return file_return('/home/kusti8/Pictures/italian-landscape-mountains-nature.jpg')
+    return 'success'
 
 back = Backend(pr)
 back.run()
