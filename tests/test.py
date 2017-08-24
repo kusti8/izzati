@@ -6,7 +6,7 @@ def pr(form, files):
     for x in files:
         x.save('/tmp/testing.jpg')
     #return file_return('/home/kusti8/Pictures/italian-landscape-mountains-nature.jpg')
-    return 'success'
+    return {'hello': 'successsssssssssssssss'}
 
 back = Backend(pr)
 back.run()
